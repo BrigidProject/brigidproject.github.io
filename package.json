@@ -1,0 +1,25 @@
+
+{
+  "name": "brigid_project_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": ">=0.4.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "^1.1.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-uglify": "^0.11.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.1.2",
+    "grunt-sass": "^1.1.0",
+    "imagemin-mozjpeg": "^5.1.0",
+    "imagemin-pngquant": "^4.2.2"
+  }
+}

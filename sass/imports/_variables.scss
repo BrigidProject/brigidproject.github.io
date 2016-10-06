@@ -1,0 +1,127 @@
+/*  Colors
+-------------*/
+
+$green: #6C8D40;
+$purple: #B89BDD;
+$gray: #F6F6F6;
+$white: #fff;
+
+
+/* Fonts
+-------------*/
+$header-font: serif;
+$body-font: sans-serif;
+
+/* Opacity
+------------*/
+
+/* Usage: set opacity across all browsers easily
+/* .faded-text {
+/*  @include opacity(0.8);
+/* }
+*/
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/* Clearfix
+-------------*/
+/* Usage: use clearfix with ease!
+/* .container-with-floated-children {
+/*  @extend %clearfix;
+/* }
+*/
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* Breakpoints
+----------------*/
+
+/* Usage: easily set breakpoints for small, medium, and large screens
+Either pass the px number through individually, or set it as a variable
+/* .sidebar {
+/*   width: 60%;
+/*   float: left;
+/*   margin: 0 2% 0 0;
+/*   @include bp-small(400px) {
+/*     width: 100%;
+/*     float: none;
+/*     margin: 0;
+/*   }
+/* }
+/* $size-small: 400px;
+/* .sidebar {
+/*   width: 60%;
+/*   float: left;
+/*   margin: 0 2% 0 0;
+/*   @include bp-small($size-small) {
+/*     width: 100%;
+/*     float: none;
+/*     margin: 0;
+/*   }
+/* }
+*/
+
+@mixin bp-large($size-large) {
+  @media only screen and (max-width: $size-large) {
+    @content;
+  }
+}
+
+@mixin bp-medium($size-medium) {
+  @media only screen and (max-width: $size-medium) {
+    @content;
+  }
+}
+
+@mixin bp-small($size-small) {
+  @media only screen and (max-width: $size-small) {
+    @content;
+  }
+}
+
+$size-medium: 769px;
+$size-small: 35.5em;
+$size-large: 64em;
+
+/* border-box
+---------------*/
+/* Usage
+/* Quickly add border-box with all vendor prefixes
+/*
+/* body {
+/*     @include border-box
+/* }
+*/
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+@mixin input {
+  input {
+    width: 100%;
+    line-height: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 2.5em;
+    margin: 5px;
+    text-transform: uppercase;
+  }
+}

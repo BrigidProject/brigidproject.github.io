@@ -1,0 +1,88 @@
+@import "variables";
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+  width: 100%;
+  @include border-box
+}
+
+//Header
+.header {
+  background: $green;
+  color: $white;
+  text-align: center;
+  padding: .75em;
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    @include bp-medium($size-medium) {
+      font-size: 2rem;
+      overflow: hidden;
+    }
+  }
+  h2 {
+    font-size: 1rem;
+    color: $purple;
+    font-family: "PT Serif";
+    font-style: italic;
+    overflow: hidden;
+    white-space: pre-line;
+  }
+  max-width: 100%;
+
+}
+
+.nav {
+  background-color: $purple;
+  a {
+    color: $white;
+  }
+  max-width: 100%;
+}
+
+//PureCSS Grids
+/* fix for IE and Firefox responsiveness */
+.pure-g {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.pure-g > div[class*="pure-u-"] {
+  padding: .5em; //Add gutters to grid columns
+  margin: .5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pure-g [class *= "pure-u"] {
+  font-family: $header_font;
+}
+.pure-g {
+  font-family: $header-font;
+}
+
+
+.content {
+  max-width: 100%;
+  font-size: 1.5em;
+  overflow: hidden;
+  white-space: pre-line;
+  text-align: center;
+}
+
+.panel {
+  border: 1px solid $purple;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+.float-left {
+  padding: 2%;
+  display: inline-block;
+}
